@@ -2,6 +2,11 @@
 
 Reproduce StreamJsonRPC issue on dotnet6-ios running in aot-only mode
 
+build:
+```
+dotnet build /p:BuildIpa=true /p:ArchiveOnBuild=true -c Debug /bl:msbuild.binlog
+```
+
 ```
 Error in rpc communication: Newtonsoft.Json.JsonSerializationException: Error writing JSON RPC Message: JsonSerializationException: Error getting value from 'RequestId' on 'StreamJsonRpc.JsonMessageFormatter+OutboundJsonRpcRequest'.
  ---> Newtonsoft.Json.JsonSerializationException: Error getting value from 'RequestId' on 'StreamJsonRpc.JsonMessageFormatter+OutboundJsonRpcRequest'.
